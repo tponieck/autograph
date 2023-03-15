@@ -335,7 +335,7 @@ status_t subgraph_validator_t::run(const std::shared_ptr<subgraph_t> &sg) {
         const auto &in_vals = op->get_input_values();
         for (size_t i = 0; i < in_vals.size(); i++) {
             // dnnl_pool_bwd's index 1 and index 2 input are optional
-            if (op->get_kind() == dnnl_impl::op_kind::dnnl_pool_bwd
+            if (op->get_kind() == autograph_impl::op_kind::dnnl_pool_bwd
                     && (i == 1 || i == 2))
                 continue;
 

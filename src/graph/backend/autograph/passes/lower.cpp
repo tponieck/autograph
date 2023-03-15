@@ -376,7 +376,7 @@ static status_t static_quant_handler(
             "scales can't be zero");
 
     std::vector<float> inv_scales
-            = dnnl_impl::utils::fmap(scales, [](float s) { return 1.f / s; });
+            = autograph_impl::utils::fmap(scales, [](float s) { return 1.f / s; });
     mul_scales_op->set_attr<std::vector<float>>(op_attr::scales, inv_scales);
     add_zps_op->set_attr<std::vector<int64_t>>(op_attr::zps, zps);
 
