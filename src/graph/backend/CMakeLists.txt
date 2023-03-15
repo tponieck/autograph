@@ -17,3 +17,4 @@
 add_subdirectory(fake)
 add_subdirectory(dnnl)
 add_subdirectory(graph_compiler)
+add_subdirectory(autograph)

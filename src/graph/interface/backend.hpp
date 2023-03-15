@@ -202,7 +202,7 @@ private:
 
     inline void invoke_backend_registration() {
         std::call_once(register_flag_, []() {
-            register_dnnl_backend();
+           // register_dnnl_backend();
             register_fake_backend();
 #ifdef DNNL_ENABLE_COMPILER_BACKEND
             register_compiler_backend();

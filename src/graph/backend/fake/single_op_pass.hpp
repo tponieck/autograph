@@ -41,7 +41,7 @@ FAKE_BACKEND_REGISTER_PASSES_DEF_BEGIN(single_op_pass)
                     });
 
 // register a wildcard matched pass
-FAKE_BACKEND_SINGLE_OP_TRANSFORM(wildcard_match_pass, fake, 1.f)
+FAKE_BACKEND_SINGLE_OP_TRANSFORM(wildcard_match_pass, fake, 10000.f)
 
 #undef FAKE_BACKEND_SINGLE_OP_TRANSFORM
 
